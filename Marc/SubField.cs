@@ -8,6 +8,9 @@ namespace Marc
 {
     public class SubField
     {
+        /// <summary>
+        /// Topengine的MARCXML方案
+        /// </summary>
         private const string XmlName = "sf";
         private const string IdAttr = "name";
 
@@ -62,6 +65,10 @@ namespace Marc
             return data;
         }
 
+        /// <summary>
+        /// TopEngine的MARCXML方案
+        /// </summary>
+        /// <returns></returns>
         public string ToXML()
         {
             XElement xe = new XElement(XmlName, data);

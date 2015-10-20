@@ -31,6 +31,9 @@ namespace Marc
             }
         }
 
+        /// <summary>
+        /// 指示符
+        /// </summary>
         public string Indicator
         {
             get
@@ -47,8 +50,16 @@ namespace Marc
         /// <returns>字段内容的字节长度</returns>
         public abstract int GetByteLength(Encoding encoding);
 
+        /// <summary>
+        /// 获得字段原始内容
+        /// </summary>
+        /// <returns>字段原始内容</returns>
         public abstract string GetContent();
 
+        /// <summary>
+        /// 获得字段查看内容
+        /// </summary>
+        /// <returns>字段查看内容</returns>
         public abstract string GetViewContent();
 
         /// <summary>
@@ -58,24 +69,28 @@ namespace Marc
         public abstract string GetPlainContent();
 
         /// <summary>
-        /// 
+        /// 还原为MARC格式字符串
         /// </summary>
-        /// <returns></returns>
+        /// <returns>MARC格式字符串</returns>
         public abstract string ToMarcString();
 
         /// <summary>
-        /// 
+        /// 生成MARCXML格式（TopEngine方案）
         /// </summary>
-        /// <returns></returns>
+        /// <returns>MARCXML格式字符串</returns>
         public abstract string ToXML();
 
         /// <summary>
-        /// 
+        /// 生存WOR格式MARC字符串
         /// </summary>
         /// <param name="lineLength">每行最大字符数</param>
-        /// <returns></returns>
+        /// <returns>WOR格式MARC字符串</returns>
         public abstract string ToWorString(int lineLength);
 
+        /// <summary>
+        /// 获得字段指示符，控制字段返回空字符
+        /// </summary>
+        /// <returns>字段指示符</returns>
         public abstract string GetIndicator();
 
     }

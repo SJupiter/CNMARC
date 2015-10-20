@@ -6,6 +6,9 @@ using System.Xml.Linq;
 
 namespace Marc
 {
+    /// <summary>
+    /// CNMARC记录
+    /// </summary>
     public class MarcRecord
     {
         private const char RecordEnd = (char)0x1d;
@@ -57,6 +60,14 @@ namespace Marc
         }
 
         #endregion
+
+        public string Leader
+        {
+            get
+            {
+                return ldr.ToString();
+            }
+        }
 
         public int FieldCount
         {
@@ -265,6 +276,10 @@ namespace Marc
             });
         }
 
+        /// <summary>
+        /// 删除字段
+        /// </summary>
+        /// <param name="f"></param>
         public void RemoveField(Field f)
         {
             int index = fields.IndexOf(f);

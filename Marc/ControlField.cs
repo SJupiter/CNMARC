@@ -9,14 +9,7 @@ namespace Marc
     public class ControlField : Field
     {
         private string content;
-
-        public string Content
-        {
-            get
-            {
-                return content;
-            }
-        }
+       
         
         public ControlField(string tag, string content)
         {
